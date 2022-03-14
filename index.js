@@ -1,4 +1,4 @@
-let moins = document.querySelectorAll('.btn-moins'); 
+let moins = document.querySelectorAll('.btn-moins');  
 let plus = document.querySelectorAll('.btn-plus');
 let increment = document.querySelectorAll('.incre');
 
@@ -31,6 +31,7 @@ function addCart(){
 	let priceArticle = document.querySelector('#price_product');
 	document.querySelector('#article-cart').innerHTML += '<tr><td class="td-th"><div class="img-article"><div class="image"><img src="images/sac_riz.jpg" alt=""></div><div class="name"><p class="name-article">'+nameArticle.value+'</p> <p class="delete">Suprimer</p></div></div></td><td class="td-th"><div class="price"><div class="btn-moins"> <p class="moins">-</p> </div><input type="number" class="incre" value="1"><div class="btn-plus"> <p class="plus">+</p> </div></div></td><td class="td-th"><div class="price-unitaire"><p>'+priceArticle.value+'</p></div></td><td class="td-th"><div class="sous-total">'+priceArticle.value+'</div></td></tr>';
 	addNewArticle();
+	totalGeneral();
 }
 
 function subtotalPlus(elt){
@@ -38,7 +39,7 @@ function subtotalPlus(elt){
     let quantity = parseInt(elt.previousElementSibling.value);
     let calcul = price * quantity;
     elt.parentElement.parentElement.nextElementSibling.nextElementSibling.children[0].innerText = calcul + ' fr';
-	totalGeneral(this);
+	totalGeneral();
 }
 
 function subtotalMoins(elt){
@@ -46,6 +47,7 @@ function subtotalMoins(elt){
     let quantity = parseInt(elt.nextElementSibling.value);
     let calcul = price * quantity;
     elt.parentElement.parentElement.nextElementSibling.nextElementSibling.children[0].innerText = calcul + ' fr';
+	totalGeneral();
 	
 }
 
@@ -59,4 +61,13 @@ function addNewArticle(){
 	for (let i = 0; i < plus.length; i++) {
 		plus[i].addEventListener('click', plusAddict)
 	}
+}
+
+function totalGeneral(){
+	let sousTotal = document.querySelectorAll('.sous-total');
+	let sum = 0;
+	for(let i=0; i<sousTotal.length; i++){
+		sum += parseInt(sousTotal[i].innerText);
+	}
+	document.querySelector('.total-price').innerText = sum;
 }
