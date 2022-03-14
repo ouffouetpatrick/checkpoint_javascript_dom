@@ -1,0 +1,170 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 10rem 10rem 10rem 10rem;
+    /*background-color: black;*/
+}
+
+.panier-title{
+    margin-bottom: 3px;
+    color: white;
+}
+
+.panier-content{
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+.panier-detail{
+    background-color: white;
+    padding: 5px;
+}
+
+.panier{
+    padding: 1rem 0.1rem 1rem 0.1rem;
+    background-color:#575965   ;
+}
+
+.table-panier{
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.p-th{
+    font-weight: bold;
+}
+
+.img-article{
+    display: flex;
+    align-items: center;
+}
+
+.image{
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+}
+
+.name-article{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.delete{
+    color: red;
+    font-weight: bold;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    text-align: center;
+    font-weight: bold;
+    width: 60px;
+    padding: 5px;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
+
+.btn-moins{
+    border: 1px solid grey;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: grey;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.btn-plus{
+    border: 1px solid grey;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: grey;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.moins{
+    text-align: center;
+    color: white;
+    padding: 2px;
+    font-weight: bolder;
+}
+
+.plus{
+    text-align: center;
+    color: white;
+    padding: 2px;
+    font-weight: bolder;
+}
+
+.sous-total{
+    color: blue;
+    font-weight: bold;
+}
+
+.add{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#add_button{
+    background: #269cd1;
+    border: 2px solid #269cd1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: .8rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.total{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.total-name{
+    color: white;
+}
+
+.total-price{
+    color: #D0D3E2;
+}
+
+.total-fr{
+    color: #D0D3E2;
+}
+
+.td-tfoot{
+    margin-top: 2rem;
+    width: 15rem;
+}
+
+.tfoot-value{
+    margin-top: 2rem;
+    width: 5rem;
+}
+
+#name_product{
+    width: 15rem;
+    cursor: pointer;
+}
+
+#price_product{
+    margin-left: 1px;
+    cursor: pointer;
+}
